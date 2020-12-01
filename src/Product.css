@@ -1,0 +1,13 @@
+.Product {
+    margin: 1px;
+    border: solid 1px black;
+    padding: 1em;
+}
+
+.Product-Button {
+    margin: 1px;
+}
+
+.Product-Image {
+    width: 200px;
+}
