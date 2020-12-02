@@ -6,8 +6,8 @@ import { Provider } from "react-redux";
 
 import './index.css';
 
-import App from './App';
 import rootReducer from "./rootReducer.js";
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const store = createStore(rootReducer);

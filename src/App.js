@@ -2,16 +2,17 @@ import { useSelector, useDispatch } from "react-redux";
 
 import './App.css';
 
+import { POPULATE_PRODUCTS } from "./actionTypes.js";
 import Product from "./Product.js";
 
 function App() {
   const dispatch = useDispatch();
   dispatch({
-    type: "POPULATE_PRODUCTS", payload: {
+    type: POPULATE_PRODUCTS, payload: {
     }
   });
 
-  const products = useSelector(store => store);
+  const products = useSelector(store => store.products);
 
   return (
     <div className="App">
