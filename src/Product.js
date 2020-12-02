@@ -1,31 +1,22 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import "./Product.css";
 
-import { ADD_TO_CART, REMOVE_FROM_CART } from "./actionTypes.js";
+import { addToCart, removeFromCart } from "./actions.js";
 
 function Product({ id, product }) {
     const dispatch = useDispatch();
-    const cart = useSelector(store => store.cart);
 
     function addClick(event) {
         event.preventDefault();
         const id = event.target.parentElement.parentElement.getAttribute("data-id");
-        dispatch({
-            type: ADD_TO_CART, payload: {
-                "id": id
-            }
-        });
+        dispatch(addToCart(id));
     }
 
     function removeClick(event) {
         event.preventDefault();
         const id = event.target.parentElement.parentElement.getAttribute("data-id");
-        dispatch({
-            type: REMOVE_FROM_CART, payload: {
-                "id": id
-            }
-        });
+        dispatch(removeFromCart(id));
     }
 
     return (

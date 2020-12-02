@@ -2,15 +2,13 @@ import { useSelector, useDispatch } from "react-redux";
 
 import './App.css';
 
-import { POPULATE_PRODUCTS } from "./actionTypes.js";
+import { populateProducts } from "./actions.js";
 import Product from "./Product.js";
+import CartCount from "./CartCount.js";
 
 function App() {
   const dispatch = useDispatch();
-  dispatch({
-    type: POPULATE_PRODUCTS, payload: {
-    }
-  });
+  dispatch(populateProducts());
 
   const products = useSelector(store => store.products);
 
@@ -19,6 +17,7 @@ function App() {
       <header className="App-header">
         SHOPLY
       </header>
+      <CartCount />
       <section id="productContainer">
         {
           Object.keys(products).map(function (product) {
