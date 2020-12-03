@@ -1,0 +1,17 @@
+.AppHeader {
+    width: 100vw;
+}
+
+.AppHeader-HomeLink {
+    display: inline-block;
+    margin: 1px;
+    width: 49%;
+    text-align: left;
+}
+
+.AppHeader-CartCount {
+    display: inline-block;
+    margin: 1px;
+    width: 49%;
+    text-align: right;
+}

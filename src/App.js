@@ -1,30 +1,28 @@
-import { useSelector, useDispatch } from "react-redux";
+import { Switch, Route, Redirect } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import './App.css';
 
 import { populateProducts } from "./actions.js";
-import Product from "./Product.js";
-import CartCount from "./CartCount.js";
+import AppHeader from "./AppHeader.js";
+import ProductListing from "./ProductListing.js";
+import ProductDetail from "./ProductDetail.js";
 
 function App() {
   const dispatch = useDispatch();
   dispatch(populateProducts());
-
-  const products = useSelector(store => store.products);
 
   return (
     <div className="App">
       <header className="App-header">
         SHOPLY
       </header>
-      <CartCount />
-      <section id="productContainer">
-        {
-          Object.keys(products).map(function (product) {
-            return (<Product key={product} id={product} product={products[product]} />);
-          })
-        }
-      </section>
+      <AppHeader />
+      <Switch>
+        <Route exact path="/products/:id"><ProductDetail /></Route>
+        <Route exact path="/"><ProductListing /></Route>
+        <Redirect to="/" />
+      </Switch>
     </div>
   );
 }

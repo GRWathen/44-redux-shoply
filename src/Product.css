@@ -4,10 +4,10 @@
     padding: 1em;
 }
 
-.Product-Button {
-    margin: 1px;
+.Product-Name {
+    font-weight: bold;
 }
 
-.Product-Image {
-    width: 200px;
+.Product-Button {
+    margin: 1px;
 }

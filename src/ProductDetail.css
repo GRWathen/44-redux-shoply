@@ -1,0 +1,13 @@
+.ProductDetail {
+    margin: 1px;
+    border: solid 1px black;
+    padding: 1em;
+}
+
+.ProductDetail-Button {
+    margin: 1px;
+}
+
+.ProductDetail-Image {
+    width: 200px;
+}
