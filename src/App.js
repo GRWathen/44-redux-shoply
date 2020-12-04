@@ -5,10 +5,12 @@ import './App.css';
 
 import { populateProducts } from "./actions.js";
 import AppHeader from "./AppHeader.js";
+import Cart from "./Cart.js";
 import ProductListing from "./ProductListing.js";
 import ProductDetail from "./ProductDetail.js";
 
 function App() {
+  console.log("APP");
   const dispatch = useDispatch();
   dispatch(populateProducts());
 
@@ -19,6 +21,7 @@ function App() {
       </header>
       <AppHeader />
       <Switch>
+        <Route exact path="/cart"><Cart /></Route>
         <Route exact path="/products/:id"><ProductDetail /></Route>
         <Route exact path="/"><ProductListing /></Route>
         <Redirect to="/" />

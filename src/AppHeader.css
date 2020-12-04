@@ -2,14 +2,14 @@
     width: 100vw;
 }
 
-.AppHeader-HomeLink {
+.AppHeader-Home {
     display: inline-block;
     margin: 1px;
     width: 49%;
     text-align: left;
 }
 
-.AppHeader-CartCount {
+.AppHeader-Cart {
     display: inline-block;
     margin: 1px;
     width: 49%;

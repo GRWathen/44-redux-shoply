@@ -1,0 +1,13 @@
+.CartItem {
+    margin: 1px;
+    border: solid 1px black;
+    padding: 1em;
+}
+
+.CartItem-Name {
+    font-weight: bold;
+}
+
+.CartItem-Button {
+    margin: 1px;
+}

@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import './AppHeader.css';
 
 function AppHeader() {
+    console.log("APPHEADER");
     const count = useSelector(function(store) {
         if (store.cart === undefined) {
             return 0;
@@ -17,13 +18,16 @@ function AppHeader() {
 
     return (
         <div className="AppHeader">
-            <span className="AppHeader-HomeLink">
+            <span className="AppHeader-Home">
                 <NavLink exact to={"/"} >
-                    HOME
+                    Home
                 </NavLink >
             </span>
-            <span className="AppHeader-CartCount">
-                Items in Cart: {count}
+            <span className="AppHeader-Cart">
+                Items in Cart: {count}&nbsp;|&nbsp;
+                <NavLink exact to={"/cart"} >
+                    Cart
+                </NavLink >
             </span>
         </div>
     );
