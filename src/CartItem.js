@@ -3,8 +3,6 @@ import { NavLink } from "react-router-dom";
 import "./CartItem.css";
 
 function CartItem({ id, product, quantity, add, remove }) {
-    console.log("CARTITEM");
-
     function addHandler() {
         add(id);
     }
@@ -25,6 +23,7 @@ function CartItem({ id, product, quantity, add, remove }) {
                     {product.price}
                 </span>
             </NavLink >
+            &nbsp;
             <button className="CartItem-Button" type="button" onClick={addHandler}> + </button>
             <button className="CartItem-Button" onClick={removeHandler}> - </button>
         </div>

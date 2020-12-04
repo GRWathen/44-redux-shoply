@@ -8,9 +8,7 @@ import { addToCart, removeFromCart } from "./actions.js";
 import CartItem from "./CartItem.js";
 
 function Cart() {
-    console.log("CART");
     const [refresh, setRefresh] = useState(false);
-    console.log(refresh);
 
     const dispatch = useDispatch();
 
@@ -36,11 +34,8 @@ function Cart() {
     const items = Object.keys(cart).filter(function(item) {
         return (cart[item].quantity > 0);
     });
-    console.log(cart);
-    console.log(items);
 
     useEffect(clearRefresh);
-    //setRefresh(false);
 
     return (
         <div className="Cart">

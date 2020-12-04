@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import './AppHeader.css';
 
 function AppHeader() {
-    console.log("APPHEADER");
     const count = useSelector(function(store) {
         if (store.cart === undefined) {
             return 0;

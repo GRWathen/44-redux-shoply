@@ -4,6 +4,10 @@
     padding: 1em;
 }
 
+.CartItem a {
+  text-decoration: none;
+}
+
 .CartItem-Name {
     font-weight: bold;
 }

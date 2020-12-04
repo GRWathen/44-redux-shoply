@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import "./ProductDetail.css";
@@ -9,6 +9,11 @@ function ProductDetail() {
     const dispatch = useDispatch();
     const { id } = useParams();
     const product = useSelector(store => store.products[id]);
+    if (product === undefined) {
+        return (
+            <Redirect to="/" />
+        );
+    }
 
     function addClick(event) {
         event.preventDefault();

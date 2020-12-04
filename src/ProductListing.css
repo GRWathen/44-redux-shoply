@@ -1,3 +1,7 @@
 .ProductListing {
   text-align: center;
 }
+
+.ProductListing a {
+  text-decoration: none;
+}

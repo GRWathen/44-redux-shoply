@@ -10,7 +10,6 @@ import ProductListing from "./ProductListing.js";
 import ProductDetail from "./ProductDetail.js";
 
 function App() {
-  console.log("APP");
   const dispatch = useDispatch();
   dispatch(populateProducts());
 
